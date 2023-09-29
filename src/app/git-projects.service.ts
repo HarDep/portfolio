@@ -10,7 +10,7 @@ export class GitProjectsService {
                               'microservicios-ejs-docker', 'microservicios-ejs-docker-frontend'];
 
   private octokit : Octokit = new Octokit({
-    auth: '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'
+    auth: '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'
   });
 
   constructor() { }

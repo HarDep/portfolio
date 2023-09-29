@@ -1390,7 +1390,7 @@
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .col-xl {
     flex: 1 0 0%;
   }
@@ -11549,6 +11549,7 @@ html {
   background: #1e30f3;
   background: linear-gradient(0deg, #020024 0%, #00d4ff 100%);
 }
+
 
 .text-gradient {
   background: -webkit-linear-gradient(0deg, #020024 0%, #00d4ff 100%);

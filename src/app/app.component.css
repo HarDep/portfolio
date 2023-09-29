@@ -1,5 +1,5 @@
   .github-star-badge {
-    color: #24292e;
+    color: #2577ca;
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -13,7 +13,7 @@
 
   .github-star-badge:hover {
     background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
+    border-color: rgba(15, 55, 95, 0.35);
     background-position: -.5em;
   }
 
