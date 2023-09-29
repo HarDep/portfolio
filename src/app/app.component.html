@@ -1,90 +1,58 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #e6e4e4;">
-  
-  <div class="container">
-
-    <a class="navbar-brand" routerLink="home">Harold Alvarado</a>
-
-    <button class="navbar-toggler ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample01"
-      aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="d-flex justify-content-start align-items-center">
-        <i class="fas fa-bars"></i>
-      </span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarExample01">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link px-3" routerLink="home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="aboutMe">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="skills">Skills</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link px-3" routerLink="projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="contact">Contact</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link pe-3" href="https://github.com/HarDep/">
-            <i class="fab fa-github fa-bounce fa-lg"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="https://www.linkedin.com/in/harold-alvarado-178497291/">
-            <i class="fab fa-linkedin-in fa-bounce fa-lg"></i>
-          </a>
-        </li>
-      </ul>
-      
+<main class="flex-shrink-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+    <div class="container px-5">
+        <a class="navbar-brand" ><span class="fw-bolder text-primary" routerLink="home">Harold Alvarado</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="aboutMe">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
+  </nav>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
   </div>
-</nav>
 
-<div class="content container-fluid">
-  <router-outlet></router-outlet>
-</div>
-
-<footer class="d-flex flex-column border-top">
-
-  <section
-    class="p-2"
-  >
-
-    <div class="d-flex justify-content-center">
-      <a class="px-3"href="https://www.linkedin.com/in/harold-alvarado-178497291/">
-        <i class="fa-brands fa-linkedin fa-beat fa-2xl" style="color: #000000;"></i>
+  <footer class="border-top  py-4 mt-auto">
+  
+    <section class="p-2">
+      <div class="d-flex justify-content-center">
+        <a class="px-3"href="https://www.linkedin.com/in/harold-alvarado-178497291/">
+          <i class="fa-brands fa-linkedin fa-beat fa-2xl" style="color: #000000;"></i>
+        </a>
+        <a class="px-3"href="https://github.com/HarDep/">
+          <i class="fa-brands fa-square-github fa-beat fa-2xl" style="color: #000000;"></i>
+        </a>
+      </div>
+    </section>
+  
+    <section class="text-center p-2 d-flex justify-content-center">
+      Did you like this project?
+      <a class="ms-3" href="https://github.com/HarDep/" target="_blank" rel="noopener"> Give my repo a star
       </a>
-    
-      <a class="px-3"href="https://github.com/HarDep/">
-        <i class="fa-brands fa-square-github fa-beat fa-2xl" style="color: #000000;"></i>
-      </a>
-    </div>
-    
-  </section>
-
-  <section class="text-center p-2">
-    Did you like this project?
-    <a href="https://github.com/HarDep/" target="_blank" rel="noopener"> Give my repo a star
-      <div class="github-star-badge">
+      <a href="https://github.com/HarDep/">
+        <span class="github-star-badge">
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none"/>
             <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-          </svg>
-        Star
+          </svg>Star
+        </span>
+      </a>
+    </section>
+
+    <section>  
+      <div class="text-center p-2">
+        © Harold Alvarado, all rights reserved
       </div>
-    </a>
-  </section>
+    </section>
+  
+  </footer>
+</main>
 
-  <div class="text-center p-2">
-    © Harold Alvarado, all rights reserved
-  </div>
-
-</footer>
 
