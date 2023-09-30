@@ -12,7 +12,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { GitProjectsService } from './git-projects.service';
 import { FormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
-import { octRepo } from '@ng-icons/octicons';
+import { octEye, octRepo, octRepoClone, octRepoForked, octStar } from '@ng-icons/octicons';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { octRepo } from '@ng-icons/octicons';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgIconsModule.withIcons({octRepo})
+    NgIconsModule.withIcons({octRepo, octRepoClone, octRepoForked, octStar, octEye}),
+    HttpClientModule
   ],
   providers: [GitProjectsService],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <main class="flex-shrink-0">
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
     <div class="container px-5">
-        <a class="navbar-brand" ><span class="fw-bolder text-primary" routerLink="home">Harold Alvarado</span></a>
+        <a class="navbar-brand" ><span class="fw-bolder text-primary text-wrap" routerLink="home">Harold Alvarado</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
@@ -15,18 +15,20 @@
     </div>
   </nav>
 
-  <section class="container-fluid text-center py-5">
-    <router-outlet></router-outlet>
+  <section class="container-fluid text-center py-5">  
+    <div class="container justify-content-center">
+      <router-outlet></router-outlet>
+    </div>
   </section>
 
-  <footer class="border-top  py-4 mt-auto">
+  <footer class="border-top py-4 mt-auto">
   
     <section class="p-2">
       <div class="d-flex justify-content-center">
-        <a class="px-3" href="https://www.linkedin.com/in/harold-alvarado-178497291/">
+        <a class="mx-3" href="https://www.linkedin.com/in/harold-alvarado-178497291/">
           <i class="fa-brands fa-linkedin fa-beat fa-2xl"></i>
         </a>
-        <a class="px-3" href="https://github.com/HarDep/">
+        <a class="mx-3" href="https://github.com/HarDep/">
           <i class="fa-brands fa-square-github fa-beat fa-2xl"></i>
         </a>
       </div>
