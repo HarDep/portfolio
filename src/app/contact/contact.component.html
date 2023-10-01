@@ -1,1 +1,96 @@
-<p>contact works!</p>
+<h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get in Contact</span></h1>
+
+<p class="mb-4">Here you can find some ways to contact me, you can send me a message to my personal phone
+     number via WhatsApp, you can also send me a message to my email, or access my LinkedIn account to contact me.
+      You also have another way to contact me through the form I have provided for you to send me a message with
+       your information.
+</p>
+
+<div class="mb-4 d-flex justify-content-evenly flex-wrap">
+    <div class="mx-2 my-2 feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+        <a style="color: white;" href="https://api.whatsapp.com/send?phone=573167074728"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="mx-2 my-2 feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+        <a style="color: white;" href="mailto:haroldralvaradol@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <div class="mx-2 my-2 feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3">
+        <a style="color: white;" href="https://www.linkedin.com/in/harold-alvarado-178497291/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
+<div class="bg-light rounded-4">
+    <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+            <div class="text-center mb-1">
+                <h3><span class="text-gradient d-inline">Contact Form</span></h3>
+            </div>
+            <form #form="ngForm" (ngSubmit)="send($event,form)">
+                <div class="form-group mb-3 text-start">
+                    <label><span class="text-gradient">Your name:</span></label>
+                    <input type="text" class="form-control" id="name" [(ngModel)]="formName" name="name" required
+                        minlength="2" maxlength="50" placeholder="Enter your name..." #name="ngModel">
+                    <div class="alert alert-danger mt-1" *ngIf="name.invalid && (name.dirty || name.touched)">
+                        <div *ngIf="name.errors['required']">Enter your name please</div>
+                        <div *ngIf="name.errors['minlength']">
+                            The name must be at least 2 characters long</div>
+                        <div *ngIf="name.errors['maxlength']">
+                            The name must have a maximum of 50 characters</div>
+                    </div>
+                </div>
+                <div class="mb-3 text-start">
+                    <label><span class="text-gradient">Your email:</span></label>
+                    <input type="email" class="form-control" id="email" [(ngModel)]="formEmail" name="email"
+                        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required
+                        placeholder="name@example.com" #email="ngModel">
+                    <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors['required']">
+                            Enter your email please
+                        </div>
+                        <div *ngIf="email.errors['pattern']">
+                            Please enter the email address in the correct format
+                        </div>
+                    </div>
+                </div>
+                <div class="text-start mb-3">
+                    <label><span class="text-gradient">Your phone:</span></label>
+                    <input type="tel" class="form-control" id="phone" [(ngModel)]="formPhone" name="phone" required
+                        placeholder="(123) 456-7890" #phone="ngModel">
+                    <div class="alert alert-danger" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                        <div *ngIf="phone.errors['required']">
+                            Enter your phone please
+                        </div>
+                    </div>
+                </div>
+                <div class="text-start mb-3">
+                    <label><span class="text-gradient">Your message:</span></label>
+                    <textarea type="text" class="form-control" id="message" [(ngModel)]="formMessage" name="message" required
+                        placeholder="Enter your message here..." #message="ngModel" style="height: 8rem"></textarea>
+                    <div class="alert alert-danger mt-1" *ngIf="message.invalid && (message.dirty || message.touched)">
+                        <div *ngIf="message.errors['required']">Enter your message please</div>
+                    </div>
+                </div>
+                <div class="d-grid"><button class="btn bg-gradient-primary-to-secondary text-white rounded-3" 
+                    type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                     [disabled]="!form.form.valid"><i class="fa-regular fa-paper-plane"></i>&nbsp; Send Message</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            The message has been sent successfully.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-gradient-primary-to-secondary text-white rounded-3" 
+          data-bs-dismiss="modal"><ng-icon name="octCheckCircle"></ng-icon>&nbsp; Ok</button>
+        </div>
+      </div>
+    </div>
+</div>

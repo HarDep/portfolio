@@ -2218,7 +2218,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #2e2a2a;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -11547,7 +11547,7 @@ html {
 
 .bg-gradient-primary-to-secondary {
   background: #1e30f3;
-  background: linear-gradient(0deg, #020024 0%, #00d4ff 100%);
+  background: linear-gradient(100deg, #020024 0%, #00d4ff 100%);
 }
 
 
