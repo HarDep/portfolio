@@ -1,15 +1,19 @@
 <main class="flex-shrink-0">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom">
+  <nav class="navbar navbar-expand-lg py-3 border-bottom">
     <div class="container px-5">
         <a class="navbar-brand" ><span class="fw-bolder text-primary text-wrap" routerLink="home">Harold Alvarado</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder d-flex align-items-center">
                 <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="aboutMe">About Me</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" (click)="changeTheme()">
+                  <ng-icon size="30" name="bootstrapBrightnessHighFill" *ngIf="!isLight"></ng-icon>
+                  <ng-icon size="30" name="bootstrapMoonFill" *ngIf="isLight"></ng-icon>
+                </a></li>
             </ul>
         </div>
     </div>

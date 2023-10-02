@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
 import { octCheckCircle, octEye, octRepo, octRepoClone, octRepoForked, octStar } from '@ng-icons/octicons';
 import { HttpClientModule } from '@angular/common/http';
+import { bootstrapBrightnessHighFill, bootstrapMoonFill } from '@ng-icons/bootstrap-icons';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgIconsModule.withIcons({octRepo, octRepoClone, octRepoForked, octStar, octEye, octCheckCircle}),
+    NgIconsModule.withIcons({octRepo, octRepoClone, octRepoForked, octStar, octEye, octCheckCircle,
+      bootstrapBrightnessHighFill, bootstrapMoonFill}),
     HttpClientModule
   ],
   providers: [GitProjectsService],
