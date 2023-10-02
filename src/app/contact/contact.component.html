@@ -3,7 +3,7 @@
 <p class="mb-4">Here you can find some ways to contact me, you can send me a message to my personal phone
      number via WhatsApp, you can also send me a message to my email, or access my LinkedIn account to contact me.
       You also have another way to contact me through the form I have provided for you to send me a message with
-       your information.
+       your information, you have to fill all the field of the form to send the message.
 </p>
 
 <div class="mb-4 d-flex justify-content-evenly flex-wrap">
@@ -69,7 +69,7 @@
                         <div *ngIf="message.errors['required']">Enter your message please</div>
                     </div>
                 </div>
-                <div class="d-grid"><button class="btn bg-gradient-primary-to-secondary text-white rounded-3" 
+                <div class="d-grid"><button class="btn bg-gradient-primary-to-secondary text-white rounded-3 border-0" 
                     type="submit" data-bs-toggle="modal" data-bs-target="#formModal"
                      [disabled]="!form.form.valid"><i class="fa-regular fa-paper-plane"></i>&nbsp; Send Message</button></div>
             </form>
@@ -88,7 +88,7 @@
             The message has been sent successfully.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn bg-gradient-primary-to-secondary text-white rounded-3" 
+          <button type="button" class="btn bg-gradient-primary-to-secondary text-white rounded-3 border-0" 
           data-bs-dismiss="modal"><ng-icon name="octCheckCircle"></ng-icon>&nbsp; Ok</button>
         </div>
       </div>
