@@ -31,15 +31,10 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    width: 4rem;
-    height: 4rem;
     z-index: -1;
   }
 
   .go-top-button{
-    width: 0rem;
-    height: 0rem;
-    border-radius: 50%;
     cursor: pointer;
     transition: .2s;
     top: 50%;
@@ -84,5 +79,32 @@
     100%{
       width: 4rem;
       height: 4rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .go-top-cont{
+      bottom: .1rem;
+      right: .1rem;
+    }
+    
+    .show .go-top-button{
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @keyframes popup {
+      0%{
+        width: 0rem;
+        height: 0rem;
+      } 
+      50%{
+        width: 4rem;
+        height: 4rem;
+      } 
+      100%{
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
   }

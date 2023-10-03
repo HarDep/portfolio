@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor(){
     window.onscroll = () =>{
-      if(document.documentElement.scrollTop > 120){
+      if(document.documentElement.scrollTop > 100){
         document.querySelector('.go-top-cont').classList.add('show');
       }else{
         document.querySelector('.go-top-cont').classList.remove('show');
