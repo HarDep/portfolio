@@ -26,6 +26,8 @@ jobs:
       run: npm i
     - name: Build app bundle
       run: npm run build:prod
+    - name: Rename index
+      run: mv dist/my-portfolio/index.html dist/my-portfolio/404.html
     - name: Deploy to gitHub Pages
       uses: crazy-max/ghaction-github-pages@v3.1.0
       with: 
