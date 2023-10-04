@@ -1,5 +1,7 @@
 # MyPortfolio
 
+[![Portfolio-CI](https://github.com/HarDep/portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/HarDep/portfolio/actions/workflows/main.yml)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
 ## Development server
