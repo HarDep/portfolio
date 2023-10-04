@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environment/environment.prod';
+import { environment } from '../../environment/environment';
 
 @Component({
   selector: 'app-home',
