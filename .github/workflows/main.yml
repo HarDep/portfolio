@@ -29,6 +29,6 @@ jobs:
     - name: Deploy to gitHub Pages
       uses: crazy-max/ghaction-github-pages@v3.1.0
       with: 
-        build_dir: dist/
+        build_dir: dist/my-portfolio
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
