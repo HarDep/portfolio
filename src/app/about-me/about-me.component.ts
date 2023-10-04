@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environment/environment';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+
+  pdf:string = '';
+
+  constructor(){
+    this.pdf = environment.urlpdf;
+  }
 
 }

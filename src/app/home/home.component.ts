@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environment/environment';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  photo_url:string = '';
+
+  constructor(){
+    this.photo_url = environment.urlphoto;
+  }
 }
