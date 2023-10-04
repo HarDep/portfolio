@@ -15,8 +15,11 @@ export class GitProjectsService {
     this.names.forEach(name =>{
       this.httpClient.get<any>('https://api.github.com/repos/HarDep/' + name).subscribe(data =>{
         if(name == 'portfolio'){
-          data.language = 'TypeScript';
+          data.language += ' TypeScript HTML';
           data.description = data.description + ' (It\'s this project, the description is not long because I want you to enjoy the project by yourself, I hope you liked it)'
+        }
+        if(name == 'microservicios-ejs-docker-frontend'){
+          data.language += ' CSS HTML';
         }
         data.url_activity = data.svn_url + '/activity';
         data.url_forks = data.svn_url + '/forks';

@@ -9,8 +9,6 @@ import { GitProjectsService } from '../git-projects.service';
 export class ProjectsComponent implements OnInit {
 
   repos : any[] = [];
-  java : string = 'Java'
-  type : string = 'TypeScript'
   tecs:string[] = ['Spring','Angular','React','Docker','Ionic','Bootstrap'];
 
   isCopied:boolean = false;
