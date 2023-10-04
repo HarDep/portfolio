@@ -1,7 +1,7 @@
 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Get in Contact</span></h1>
 
 <p class="mb-4">Here you can find some ways to contact me, you can send me a message to my personal phone
-     number via WhatsApp, you can also send me a message to my email, or access my LinkedIn account to contact me.
+     number via WhatsApp, you can also send me a message to my email, or get access to my LinkedIn account to contact me.
       You also have another way to contact me through the form I have provided for you to send me a message with
        your information, you have to fill all the field of the form to send the message.
 </p>
@@ -49,17 +49,20 @@
                                 Enter your email please
                             </div>
                             <div *ngIf="email.errors['pattern']">
-                                Please enter the email address in the correct format
+                                Please enter the email address in the correct emails format
                             </div>
                         </div>
                     </div>
                     <div class="text-start mb-3">
                         <label><span class="text-gradient">Your phone:</span></label>
                         <input type="tel" class="form-control" id="phone" [(ngModel)]="formPhone" name="phone" required
-                            placeholder="(123) 456-7890" #phone="ngModel">
+                            pattern="[+][0-9]{1,3}[ ][0-9- ]+" placeholder="+123 456-7890" #phone="ngModel">
                         <div class="alert alert-danger" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
                             <div *ngIf="phone.errors['required']">
                                 Enter your phone please
+                            </div>
+                            <div *ngIf="phone.errors['pattern']">
+                                Please enter your phone in the correct phones format
                             </div>
                         </div>
                     </div>
@@ -88,8 +91,8 @@
           <h5 class="modal-title" id="formModalLabel">Contact Form</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            The message has been sent successfully.
+        <div class="modal-body">{{isSent? 'The message has been sent successfully.':
+            'The message could not be sent, please try another way to contact me.'}}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn bg-gradient-primary-to-secondary text-white rounded-3 border-0" 
