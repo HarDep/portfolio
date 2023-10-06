@@ -8,16 +8,30 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My Portfolio';
   isLight = true;
-  body:HTMLElement = document.querySelector('body');
+  private body:HTMLElement = document.querySelector('body');
+  private toTopButton: HTMLElement = null;
 
   constructor(){
-    window.onscroll = () =>{
+    window.onscroll = () => {
+      if(this.toTopButton == null){
+        this.toTopButton =  document.querySelector('.go-top-cont');
+      }
       if(document.documentElement.scrollTop > 100){
-        document.querySelector('.go-top-cont').classList.add('show');
+        this.toTopButton.classList.add('show');
       }else{
-        document.querySelector('.go-top-cont').classList.remove('show');
+        this.toTopButton.classList.remove('show');
       }
     };
+    this.putTheme();
+  }
+
+  private putTheme(){
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches === true){
+      this.body.setAttribute('data-bs-theme','dark');
+      this.isLight = false;
+    }else{
+      this.body.setAttribute('data-bs-theme','light');
+    }
   }
 
   changeTheme(){
